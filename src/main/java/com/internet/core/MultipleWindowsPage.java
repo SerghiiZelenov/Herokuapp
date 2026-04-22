@@ -25,12 +25,12 @@ public class MultipleWindowsPage extends BasePage {
     }
 
     public MultipleWindowsPage switchToNewWindow(int index) {
-        List<String> windows = new ArrayList<>(driver.getWindowHandles()); // список всех окон
-        driver.switchTo().window(windows.get(index)); // переход в окно по индексу
+        List<String> windows = new ArrayList<>(driver.getWindowHandles());
+        driver.switchTo().window(windows.get(index));
         return this;
     }
 
     public String getNewWindowText() {
-        return newWindowText.getText(); // вернуть текст из нового окна
+        return newWindowText.getText();
     }
 }
